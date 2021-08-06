@@ -6,8 +6,8 @@ import { useKeyboardMouseInput } from './util/useKeyboardMouseInput'
 import { thirdPerson } from './util/thirdPerson'
 import { Player } from './util/Player'
 
-import Terrain from './Terrain/index.jsx'
-import WorldCreatorTerrain from './Terrain/worldCreator'
+import Terrain from './terrain/index.jsx'
+import WorldCreatorTerrain from './terrain/worldCreator'
 import { Skybox } from './Skybox'
 
 import world from '../../../public/maps/CustomTerrainShape/_bridge.json'
