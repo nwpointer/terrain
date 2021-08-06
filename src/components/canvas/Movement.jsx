@@ -6,7 +6,7 @@ import * as THREE from 'three'
 import { useKeyboardMouseInput } from './util/useKeyboardMouseInput'
 import { useGamePadInput } from './util/useGamePadInput'
 import { Vector3 } from 'three'
-import { thirdPerson } from './util/thirdPerson'
+import { ThirdPerson } from './util/thirdPerson'
 import { Player } from './util/Player'
 
 export default function Movement() {

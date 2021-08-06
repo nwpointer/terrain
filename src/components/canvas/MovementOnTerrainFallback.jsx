@@ -3,7 +3,7 @@ import { Suspense } from 'react'
 import * as THREE from 'three'
 import { useKeyboardMouseInput } from './util/useKeyboardMouseInput'
 
-import { thirdPerson } from './util/thirdPerson'
+import { ThirdPerson } from './util/thirdPerson'
 import { Player } from './util/Player'
 
 import Terrain from './terrain/index.jsx'
