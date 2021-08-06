@@ -2,7 +2,7 @@ import { useThree } from '@react-three/fiber'
 import { useRef } from 'react'
 import * as THREE from 'three'
 
-export function thirdPerson(useInput, controls, body, api) {
+export function ThirdPerson(useInput, controls, body, api) {
   const { camera } = useThree()
   const target = useRef(new THREE.Vector3())
   const rot = useRef(new THREE.Euler(0))

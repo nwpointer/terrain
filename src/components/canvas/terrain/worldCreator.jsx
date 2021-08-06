@@ -27,18 +27,16 @@ export default function WorldCreatorTerrain({ world, smart = true }) {
   ]
 
   const diffuse = textureInfo.map((info) => {
-    const texture = useLoader(TextureLoader, info.Diffuse)
-    texture.wrapT = RepeatWrapping
-    texture.wrapS = RepeatWrapping
-
-    const [w, h] = info.TileSize.split(',')
-    const scale = 2
-
-    texture.repeat = new Vector2(
-      (resolution.x / parseFloat(w)) * scale,
-      (resolution.y / parseFloat(h)) * scale
-    )
-    return texture
+    // const texture = useLoader(TextureLoader, info.Diffuse)
+    // texture.wrapT = RepeatWrapping
+    // texture.wrapS = RepeatWrapping
+    // const [w, h] = info.TileSize.split(',')
+    // const scale = 2
+    // texture.repeat = new Vector2(
+    //   (resolution.x / parseFloat(w)) * scale,
+    //   (resolution.y / parseFloat(h)) * scale
+    // )
+    // return texture
   })
 
   return (

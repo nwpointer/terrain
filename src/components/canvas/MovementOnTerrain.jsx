@@ -12,7 +12,7 @@ import { Skybox } from './Skybox'
 
 import world from '../../../public/maps/CustomTerrainShape/_bridge.json'
 
-export default function () {
+export default function Movement() {
   return (
     <Suspense fallback={null}>
       {/* <Player

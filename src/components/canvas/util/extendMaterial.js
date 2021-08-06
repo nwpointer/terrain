@@ -646,7 +646,7 @@ function ext(THREE) {
     displacementMap: 'USE_DISPLACEMENTMAP',
   }
 
-  function useUniformPairs(instance, uniforms) {
+  function _useUniformPairs(instance, uniforms) {
     // Only pairs with initial values other than null or zero needed
 
     if (!instance) return
@@ -668,8 +668,8 @@ function ext(THREE) {
       cloneUniforms(UniformsLib.clearcoatnormalmap, uniforms)
   }
 
-  function useUniforms(name, object, uniforms) {
-    useUniformPairs(object.uniforms, uniforms)
+  function _useUniforms(name, object, uniforms) {
+    _useUniformPairs(object.uniforms, uniforms)
 
     if (object.common !== false) cloneUniforms(UniformsLib.common, uniforms)
 
@@ -926,7 +926,7 @@ function ext(THREE) {
     } else {
       // Only use declared and necessary
 
-      return useUniforms(name, object, uniforms) // cloneUniforms( THREE.ShaderLib[ name ].uniforms, uniforms, true );
+      return _useUniforms(name, object, uniforms) // cloneUniforms( THREE.ShaderLib[ name ].uniforms, uniforms, true );
     }
   }
 

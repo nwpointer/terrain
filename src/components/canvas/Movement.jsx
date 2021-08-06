@@ -9,7 +9,7 @@ import { Vector3 } from 'three'
 import { thirdPerson } from './util/thirdPerson'
 import { Player } from './util/Player'
 
-export default function () {
+export default function Movement() {
   return (
     <Suspense fallback={null}>
       {/* <Player

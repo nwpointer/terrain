@@ -32,7 +32,7 @@ const Loading = () => {
   )
 }
 
-export default function () {
+export default function MatDemo() {
   return (
     <Suspense fallback={<Loading />}>
       <MaterialDemo world={world} />
@@ -105,9 +105,10 @@ export function MaterialDemo({ world }) {
   const { height, ratio } = getWorldSize(world)
 
   const noise = useLoader(THREE.TextureLoader, '/img/simplex-noise.png')
-  const splats = world.Texturing.SplatTexture.map((t) =>
-    useLoader(TGALoader, root + t.Name)
-  )
+  const splats = [
+    useLoader(TGALoader, root + world.Texturing.SplatTexture[0].Name),
+    useLoader(TGALoader, root + world.Texturing.SplatTexture[1].Name),
+  ]
 
   // TODO, REPLACE WITH HIGHER RES NORMAL & HIGHT MAP
   const [
@@ -125,20 +126,47 @@ export function MaterialDemo({ world }) {
     n4,
     d5,
   ] = [
-    'normalmap-y-hd.jpg',
-    'heightmap.jpg',
-    'normals.png',
-    'diffuse.png',
-    'Assets/Cliffs_02/Rock_DarkCrackyCliffs_col.png',
-    'Assets/Cliffs_02/Rock_DarkCrackyCliffs_norm.png',
-    'Assets/Rock_04/Rock_sobermanRockWall_col.png',
-    'Assets/Rock_04/Rock_sobermanRockWall_norm.png',
-    'Assets/Mud_03/Ground_WetBumpyMud_col.png',
-    'Assets/Mud_03/Ground_WetBumpyMud_norm.png',
-    'Assets/Grass_020/ground_Grass1_col.png',
-    'Assets/Grass_020/ground_Grass1_norm.png',
-    'Assets/Grass_021/ground_Grass1_col.png',
-  ].map((m) => useLoader(THREE.TextureLoader, root + m))
+    useLoader(THREE.TextureLoader, root + 'normalmap-y-hd.jpg'),
+    useLoader(THREE.TextureLoader, root + 'heightmap.jpg'),
+    useLoader(THREE.TextureLoader, root + 'normals.png'),
+    useLoader(THREE.TextureLoader, root + 'diffuse.png'),
+    useLoader(
+      THREE.TextureLoader,
+      root + 'Assets/Cliffs_02/Rock_DarkCrackyCliffs_col.png'
+    ),
+    useLoader(
+      THREE.TextureLoader,
+      root + 'Assets/Cliffs_02/Rock_DarkCrackyCliffs_norm.png'
+    ),
+    useLoader(
+      THREE.TextureLoader,
+      root + 'Assets/Rock_04/Rock_sobermanRockWall_col.png'
+    ),
+    useLoader(
+      THREE.TextureLoader,
+      root + 'Assets/Rock_04/Rock_sobermanRockWall_norm.png'
+    ),
+    useLoader(
+      THREE.TextureLoader,
+      root + 'Assets/Mud_03/Ground_WetBumpyMud_col.png'
+    ),
+    useLoader(
+      THREE.TextureLoader,
+      root + 'Assets/Mud_03/Ground_WetBumpyMud_norm.png'
+    ),
+    useLoader(
+      THREE.TextureLoader,
+      root + 'Assets/Grass_020/ground_Grass1_col.png'
+    ),
+    useLoader(
+      THREE.TextureLoader,
+      root + 'Assets/Grass_020/ground_Grass1_norm.png'
+    ),
+    useLoader(
+      THREE.TextureLoader,
+      root + 'Assets/Grass_021/ground_Grass1_col.png'
+    ),
+  ]
 
   // diffuseAtlas.magFilter = THREE.LinearFilter
   // diffuseAtlas.minFilter = THREE.LinearMipMapNearestFilter
