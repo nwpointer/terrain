@@ -26,14 +26,15 @@ const LCanvas = ({ children }) => {
 
   return (
     <Canvas
-      gl={
-        {
-          // physicallyCorrectLights: true,
-          // toneMappingExposure: Math.pow(0.7, 5.0),
-        }
-      }
+      // gl={{
+      //   physicallyCorrectLights: true,
+      //   shadowMap: {
+      //     enabled: true,
+      //   },
+      //   toneMappingExposure: Math.pow(0.7, 5.0),
+      // }}
       onCreated={(state) => state.events.connect(dom.current)}
-      shadows
+      // shadows
       camera={{ position: [0, 200, 5], fov: 50, far: 3000 }}
     >
       <LControl />

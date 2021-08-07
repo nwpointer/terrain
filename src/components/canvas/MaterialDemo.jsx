@@ -132,7 +132,7 @@ export function MaterialDemo({ world }) {
     useLoader(THREE.TextureLoader, root + 'diffuse.png'),
     useLoader(
       THREE.TextureLoader,
-      root + 'Assets/Cliffs_02/Rock_DarkCrackyCliffs_col.png'
+      root + 'Assets/Cliffs_02/Rock_DarkCrackyCliffs_col.jpg'
     ),
     useLoader(
       THREE.TextureLoader,
@@ -140,7 +140,7 @@ export function MaterialDemo({ world }) {
     ),
     useLoader(
       THREE.TextureLoader,
-      root + 'Assets/Rock_04/Rock_sobermanRockWall_col.png'
+      root + 'Assets/Rock_04/Rock_sobermanRockWall_col.jpg'
     ),
     useLoader(
       THREE.TextureLoader,
@@ -148,7 +148,7 @@ export function MaterialDemo({ world }) {
     ),
     useLoader(
       THREE.TextureLoader,
-      root + 'Assets/Mud_03/Ground_WetBumpyMud_col.png'
+      root + 'Assets/Mud_03/Ground_WetBumpyMud_col.jpg'
     ),
     useLoader(
       THREE.TextureLoader,
@@ -156,7 +156,7 @@ export function MaterialDemo({ world }) {
     ),
     useLoader(
       THREE.TextureLoader,
-      root + 'Assets/Grass_020/ground_Grass1_col.png'
+      root + 'Assets/Grass_020/ground_Grass1_col.jpg'
     ),
     useLoader(
       THREE.TextureLoader,
@@ -164,7 +164,7 @@ export function MaterialDemo({ world }) {
     ),
     useLoader(
       THREE.TextureLoader,
-      root + 'Assets/Grass_021/ground_Grass1_col.png'
+      root + 'Assets/Grass_021/ground_Grass1_col.jpg'
     ),
   ]
 
@@ -186,13 +186,17 @@ export function MaterialDemo({ world }) {
 
   var material = useMemo(() => {
     const material = new THREE.MeshStandardMaterial({
-      metalness: 1,
-      roughness: 1,
+      metalness: 1.115,
+      // roughness: 1,
       displacementMap,
       displacementScale: height.max / ratio - height.min / ratio,
       displacementBias: height.min / ratio,
       // normalScale: new THREE.Vector2(0.1, 0.9),
-      normalScale: new THREE.Vector2(1.5, 2),
+      // normalScale: new THREE.Vector2(1.5, 1.5),
+      normalScale: new THREE.Vector2(1.25, 1.75),
+      // normalScale: new THREE.Vector2(1, 1.5),
+      // castShadow: true,
+      // receiveShadow: true,
       normalMap,
       envMapIntensity: envint,
     })
