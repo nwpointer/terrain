@@ -136,7 +136,7 @@ export function MaterialDemo({ world }) {
     ),
     useLoader(
       THREE.TextureLoader,
-      root + 'Assets/Cliffs_02/Rock_DarkCrackyCliffs_norm.png'
+      root + 'Assets/Cliffs_02/Rock_DarkCrackyCliffs_norm.jpg'
     ),
     useLoader(
       THREE.TextureLoader,
@@ -144,7 +144,7 @@ export function MaterialDemo({ world }) {
     ),
     useLoader(
       THREE.TextureLoader,
-      root + 'Assets/Rock_04/Rock_sobermanRockWall_norm.png'
+      root + 'Assets/Rock_04/Rock_sobermanRockWall_norm.jpg'
     ),
     useLoader(
       THREE.TextureLoader,
@@ -152,7 +152,7 @@ export function MaterialDemo({ world }) {
     ),
     useLoader(
       THREE.TextureLoader,
-      root + 'Assets/Mud_03/Ground_WetBumpyMud_norm.png'
+      root + 'Assets/Mud_03/Ground_WetBumpyMud_norm.jpg'
     ),
     useLoader(
       THREE.TextureLoader,
@@ -160,7 +160,7 @@ export function MaterialDemo({ world }) {
     ),
     useLoader(
       THREE.TextureLoader,
-      root + 'Assets/Grass_020/ground_Grass1_norm.png'
+      root + 'Assets/Grass_020/ground_Grass1_norm.jpg'
     ),
     useLoader(
       THREE.TextureLoader,
