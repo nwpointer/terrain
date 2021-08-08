@@ -114,8 +114,8 @@ export function MaterialDemo({ world }) {
   const [
     normalMap,
     displacementMap,
-    normalAtlas,
-    diffuseAtlas,
+    // normalAtlas,
+    // diffuseAtlas,
     d1,
     n1,
     d2,
@@ -126,10 +126,12 @@ export function MaterialDemo({ world }) {
     n4,
     d5,
   ] = [
-    useLoader(THREE.TextureLoader, root + 'normalmap-y-hd.jpg'),
+    // useLoader(THREE.TextureLoader, root + 'normalmap-y-hd.jpg'),
+    useLoader(THREE.TextureLoader, root + 'normalmap-y-hdc.jpg'),
+    // useLoader(THREE.TextureLoader, root + 'normalmap-y.jpg'),
     useLoader(THREE.TextureLoader, root + 'heightmap.jpg'),
-    useLoader(THREE.TextureLoader, root + 'normals.png'),
-    useLoader(THREE.TextureLoader, root + 'diffuse.png'),
+    // useLoader(THREE.TextureLoader, root + 'normals.png'),
+    // useLoader(THREE.TextureLoader, root + 'diffuse.png'),
     useLoader(
       THREE.TextureLoader,
       root + 'Assets/Cliffs_02/Rock_DarkCrackyCliffs_col.jpg'
@@ -227,11 +229,11 @@ export function MaterialDemo({ world }) {
         // uDiffuseStartV: { value: diffuseData.startV },
         // uDiffuseEndV: { value: diffuseData.endV },
 
-        uNormalAtlas: { value: normalAtlas },
-        uNormalStartU: { value: normalsData.startU },
-        uNormalEndU: { value: normalsData.endU },
-        uNormalStartV: { value: normalsData.startV },
-        uNormalEndV: { value: normalsData.endV },
+        // uNormalAtlas: { value: normalAtlas },
+        // uNormalStartU: { value: normalsData.startU },
+        // uNormalEndU: { value: normalsData.endU },
+        // uNormalStartV: { value: normalsData.startV },
+        // uNormalEndV: { value: normalsData.endV },
 
         uRepeat: {
           value: diffuseData.repeat.map((r) => new THREE.Vector2(...r)),
