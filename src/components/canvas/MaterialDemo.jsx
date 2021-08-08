@@ -126,10 +126,10 @@ export function MaterialDemo({ world }) {
     n4,
     d5,
   ] = [
-    // useLoader(THREE.TextureLoader, root + 'normalmap-y-hd.jpg'),
-    useLoader(THREE.TextureLoader, root + 'normalmap-y-hdc.jpg'),
+    useLoader(THREE.TextureLoader, root + 'normalmap-y-hd.jpg'),
+    // useLoader(THREE.TextureLoader, root + 'normalmap-y-hdc.jpg'),
     // useLoader(THREE.TextureLoader, root + 'normalmap-y.jpg'),
-    useLoader(THREE.TextureLoader, root + 'heightmap.jpg'),
+    useLoader(THREE.TextureLoader, root + 'heightmap-hd.jpg'),
     // useLoader(THREE.TextureLoader, root + 'normals.png'),
     // useLoader(THREE.TextureLoader, root + 'diffuse.png'),
     useLoader(
